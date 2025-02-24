@@ -22,7 +22,7 @@ transition: slide-left
 mdc: true
 ---
 
-# Flutter環境構築のポイント
+# Flutter環境構築
 
 <!-- Presentation slides for developers -->
 
@@ -142,6 +142,10 @@ level: 2
 
 <br>
 
+（GitとVSCodeのインストールが前提）
+
+<br>
+
 ・ macOSの場合は[こちら](https://zenn.dev/flutteruniv/books/flutter-textbook/viewer/get-started)を参考に
 <br>
 ・Windowsの場合は[こちら](https://zenn.dev/kazutxt/books/flutter_practice_introduction/viewer/06_chapter1_environment)を参考に
@@ -151,7 +155,7 @@ level: 2
 
 # FlutterSDKをインストール
 
-- 公式サイトからFlutterSDKをインストール（Gitのインストールが前提）<br>
+- 公式サイトからFlutterSDKをインストール<br>
 　- プラットフォームの選択 → https://gyazo.com/8ddc41827d702c8d42f65da1e0861614<br>
 　- デバイスの選択 → https://gyazo.com/62f51b217afd1940468e91a067622f78<br>
 　- SDKのインストール → https://gyazo.com/b8b3a377966ca4e07300dcdca9f9fb3a<br>
@@ -174,6 +178,59 @@ level: 2
     echo export PATH=\"\$PATH:\$HOME/development/flutter/bin\" >> ~/.bash_profile
     source ~/.bash_profile
   ```
+
+---
+
+# Android Studioのインストール
+
+- `flutter doctor`で開発環境の情報を出力し、必要事項をチェックしていく。(https://gyazo.com/2c8d2abcc651ca9dbb9d20100e498be1)
+
+- [こちら](https://codeforfun.jp/how-to-install-android-studio-windows-and-mac/)を参考にAndroid Studioをインストール（https://developer.android.com/studio）<br>
+　- SDK Managerを選択 (https://gyazo.com/7e4c22bbab016e53de30e962bf3fc911)<br>
+　- SDK ToolsからAndroid SDK Command-line toolを選択し、applyする (https://gyazo.com/1994564f905bfa9d95e4601216ae1801)<br>
+　- licenseエラーの対応 → `flutter doctor --android-licenses`を行い、同意操作をyで進める。
+　- `flutter doctor`を再度行い、チェックがついたらOK
+
+```
+[!] Android toolchain - develop for Android devices (Android SDK version 32.1.0-rc1)
+! Some Android licenses not accepted. To resolve this, run: flutter doctor --android-licenses
+```
+
+---
+
+# Xcodeのインストール
+
+- こちらも同様に、`flutter doctor`で開発環境の情報を出力し、必要事項をチェックしていく。(https://gyazo.com/2c8d2abcc651ca9dbb9d20100e498be1)
+
+- Mac App Storeからインストール（https://apps.apple.com/jp/app/xcode/id497799835?mt=12）<br>
+（[開発者向けサイト](https://developer.apple.com/download/applications/)からバージョンを選んでダウンロード）<br>
+　- インストール後、下記コマンドを実行
+
+```zsh
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer // コマンドラインツールのディレクトリ指定
+sudo xcodebuild -runFirstLaunch // Xcode関連パッケージのインストール
+sudo xcodebuild -license // ライセンスの同意
+
+xcodebuild -downloadPlatform iOS // シミュレータのインストール
+
+sudo gem install cocoapods // CocoaPodsのインストール
+```
+
+<br>
+
+- `flutter doctor`を再度行い、チェックがついたらOK
+
+
+---
+
+# 参考
+
+- https://zenn.dev/flutteruniv/books/flutter-textbook/viewer/get-started
+- https://zenn.dev/kazutxt/books/flutter_practice_introduction/viewer/06_chapter1_environment
+- https://codeforfun.jp/how-to-install-android-studio-windows-and-mac/
+- https://qiita.com/ch0c0bana0/items/36ea0fb9d6857f6dac5e
+- https://zenn.dev/peter_norio/articles/22d17e9ae33ab3
+- [Flutter実践開発](https://www.amazon.co.jp/Flutter%E5%AE%9F%E8%B7%B5%E9%96%8B%E7%99%BA-%E2%94%80%E2%94%80-iPhone%EF%BC%8FAndroid%E4%B8%A1%E5%AF%BE%E5%BF%9C%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF-%E6%B8%A1%E9%83%A8-%E9%99%BD%E5%A4%AA/dp/4297139936)
 
 ---
 
