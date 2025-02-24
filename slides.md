@@ -153,7 +153,7 @@ level: 2
 ---
 
 
-# FlutterSDKをインストール
+# FlutterSDKのインストール
 
 - 公式サイトからFlutterSDKをインストール<br>
 　- プラットフォームの選択 → https://gyazo.com/8ddc41827d702c8d42f65da1e0861614<br>
@@ -180,6 +180,18 @@ level: 2
   ```
 
 ---
+
+
+# FlutterSDKのインストール
+
+- Apple Siliconの場合はRosetta2のインストールも必要
+
+```zsh
+sudo softwareupdate --install-rosetta --agree-to-license
+```
+
+---
+
 
 # Android Studioのインストール
 
@@ -219,6 +231,28 @@ sudo gem install cocoapods // CocoaPodsのインストール
 <br>
 
 - `flutter doctor`を再度行い、チェックがついたらOK
+
+
+---
+
+# エミュレータの立ち上げ
+
+- Android Studioで[View Device Manager](https://gyazo.com/a90d04f78f70394738a1f133a737b50d)を開く
+- [+ボタン](https://gyazo.com/d18153f70215d8583a42469d835a47e9)からエミュレータの追加を行う
+- [デバイス](https://gyazo.com/2a59d75f3a128ab316681bfee7fcbdc9)を選択する
+- [APIバージョン](https://gyazo.com/dd008431d17a5f363f24014323047427)を選択する
+- [設定情報](https://gyazo.com/6108f9afcc2bfe292db8aa5d0f74f266)を確認して終了
+- 立ち上げたいエミュレータで[三角ボタン](https://gyazo.com/dacb67f874fe1deaf4f17bcb3cd1994b)を押す
+
+
+---
+
+# Flutterアプリの作成
+
+- `flutter create アプリ名`
+　- https://gyazo.com/e00f289388f92b69d341051f49e3e186
+- [エミュレータ](https://gyazo.com/4476d751ae19c6b6490ade6d4b7ce511)が立ち上がっていることを確認
+- `flutter run`
 
 
 ---
