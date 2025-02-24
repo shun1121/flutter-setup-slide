@@ -253,6 +253,7 @@ sudo gem install cocoapods // CocoaPodsのインストール
 　- https://gyazo.com/e00f289388f92b69d341051f49e3e186
 - [エミュレータ](https://gyazo.com/4476d751ae19c6b6490ade6d4b7ce511)が立ち上がっていることを確認
 - `flutter run`
+- エミュレータでアプリが起動したことを確認 https://gyazo.com/f79b54b2b71c574c09743f9a8988c66f
 
 
 ---
