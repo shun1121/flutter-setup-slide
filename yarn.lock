@@ -3862,6 +3862,7 @@ __metadata:
     "@slidev/cli": ^51.3.0
     "@slidev/theme-default": latest
     "@slidev/theme-seriph": latest
+    playwright-chromium: ^1.50.1
     vue: ^3.5.13
   languageName: unknown
   linkType: soft
@@ -5780,6 +5781,26 @@ __metadata:
   version: 1.4.0
   resolution: "plantuml-encoder@npm:1.4.0"
   checksum: d0ad77d960a8b092d8cfe9bdefc7a482ec073ecc686a92e482a8cbe35183d42433e79efd61fe24859ebd3219859d7fe022d49aaeec8827d46fde2ae4e7dba461
+  languageName: node
+  linkType: hard
+
+"playwright-chromium@npm:^1.50.1":
+  version: 1.50.1
+  resolution: "playwright-chromium@npm:1.50.1"
+  dependencies:
+    playwright-core: 1.50.1
+  bin:
+    playwright: cli.js
+  checksum: 8b83e4ed9416875b7213cf0ae08ad32c1ace3905d6f16c9b41d3756d466a4d54249b63d97d219ddbc6e0008bc7c280da7300d98d782ff3896ea5803abde89571
+  languageName: node
+  linkType: hard
+
+"playwright-core@npm:1.50.1":
+  version: 1.50.1
+  resolution: "playwright-core@npm:1.50.1"
+  bin:
+    playwright-core: cli.js
+  checksum: 9c9c3115e8c39c9a2f4e0dc5b2bc1d76925fb0244051ace2bcffc7b2b66cf6fe1b96d9162f81bc7d9b7811b8c6f9df5aa93052d1284bfd6d30203bf4f7b58868
   languageName: node
   linkType: hard
 
